@@ -15,6 +15,7 @@ def ln(x):
         return negative_inf
 
 def memoize(f):
+    """Memoization decorator. Requires no varargs and immutable arguments."""
     cache = {}
     def cached(*args):
         if args not in cache:
