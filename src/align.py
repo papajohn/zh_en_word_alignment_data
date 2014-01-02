@@ -35,7 +35,7 @@ class Aligned:
         guess_forward, guess_backward, _ = set(), set(), set()
         self.parse(forward, guess_forward, _)
         self.parse(backward, guess_backward, _)
-        return guess_forward.intersect(guess_backward)
+        return guess_forward.intersection(guess_backward)
 
     def render(self, guess):
         """Render align, a moses-formatted alignment string."""
