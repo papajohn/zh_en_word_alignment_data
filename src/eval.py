@@ -54,8 +54,7 @@ if __name__ == "__main__":
     # Flag -p prints extracted phrase pairs for an alignment file.
     if sys.argv[1] == '-p':
         for links in read(sys.argv[2]):
-            for bispan in sorted(extract(*links)):
-                print(bispan)
+            print(sorted(extract(*links)))
         sys.exit(0)
     gold_path, guess_paths = sys.argv[1], sys.argv[2:]
     gold = list(read(gold_path))
