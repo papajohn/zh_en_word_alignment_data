@@ -56,7 +56,6 @@ if __name__ == "__main__":
         for links in read(sys.argv[2]):
             for bispan in sorted(extract(*links)):
                 print(bispan)
-            break
         sys.exit(0)
     gold_path, guess_paths = sys.argv[1], sys.argv[2:]
     gold = list(read(gold_path))
