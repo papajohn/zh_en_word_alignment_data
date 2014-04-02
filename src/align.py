@@ -38,7 +38,7 @@ class Aligned:
         return guess_forward.intersection(guess_backward)
 
     def render(self, guess):
-        """Render align, a moses-formatted alignment string."""
+        """Render this alignment as a grid."""
         # Alignment links and horizontal labels
         link_lines = []
         for j, zh in enumerate(self.zh):

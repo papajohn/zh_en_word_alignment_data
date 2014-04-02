@@ -19,6 +19,7 @@ class AER:
     def combined(self):
         return 1-(self.guess_sure+self.guess_possible)/(self.guess+self.sure)
     def add(self, guess, sure, possible):
+        "Add statistics for sets of links guess, sure, and possible."
         self.guess += len(guess)
         self.sure += len(sure)
         self.guess_sure += len(guess.intersection(sure))
