@@ -9,8 +9,8 @@ if __name__ == "__main__":
     data_files = [open(f) for f in data_paths]
 
     for i, (zh, en, gold, guess) in enumerate(zip(*data_files)):
-        zh_words = zh.lower().split()
-        en_words = en.lower().split()
+        zh_words = zh.lower().strip().split(' ')
+        en_words = en.lower().strip().split(' ')
         gold_align = Aligned(zh_words, en_words, gold.strip())
         guess_align = Aligned(zh_words, en_words, guess.strip())
         print("Alignment %d:" % i)

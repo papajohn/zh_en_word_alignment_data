@@ -87,8 +87,3 @@ if __name__ == "__main__":
         guess = a.combine(forward, backward)
         print("Alignment %d:" % i)
         print(a.render(guess))
-
-
-
-
-
